@@ -1,11 +1,13 @@
 <html>
-  <head>
-    <title>Angular 2 QuickStart</title>
+<head>
+    <title>Cody Helbling</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link href="static/NgApp/bootstrapMod.css" rel="stylesheet" type="text/css">
     <!-- Polyfill(s) for older browsers -->
     <script src="static/NgApp/node_modules/core-js/client/shim.min.js"></script>
     <script src="static/NgApp/node_modules/zone.js/dist/zone.js"></script>
@@ -15,42 +17,78 @@
 
 
     <script>
-      System.import('app').catch(function(err){ console.error("Import Failed: \n" + err); });
+        System.import('app').catch(function(err){ console.error("Import Failed: \n" + err); });
     </script>
-  </head>
+</head>
 
 
-  <body>
-    <my-app>Loading...</my-app>
+<body>
 
+<!-- HERO START -->
+<header id="home" class="hero">
+    <div class="pattern-overlay"></div>
 
-        <!-- HERO START -->
-    <header id="home" class="hero">
-        <div class="pattern-overlay"></div>
+    <div class="hero-body">
+        <div class="hero-text text-center">
+            <h1 class="small">
+                Cody Helbling <span class="blinker"></span>
+            </h1>
 
-        <div class="hero-body">
-            <div class="hero-text text-center">
-                <h1 class="small">
-                    Cody Helbling <span class="blinker"></span>
-                </h1>
+            <h1>Full Stack Software Engineer</h1>
 
-                <h1>Full Stack Software Engineer</h1>
+            <p>developer, geek, addict.</p>
 
-                <p>developer, geek, addict.</p>
-
-                <div class="page-scroll">
-                    <a href="#profile" class="btn btn-lg btn-custom">
-                        Learn More
-                    </a>
-                </div>
-                <!-- //.page-scroll -->
+            <div class="page-scroll">
+                <a href="#profile" class="btn btn-lg btn-custom">
+                    Learn More
+                </a>
             </div>
-            <!-- //.hero-text -->
+            <!-- //.page-scroll -->
         </div>
-        <!-- //.hero-body -->
-    </header>
-    <!-- //HERO END -->
+        <!-- //.hero-text -->
+    </div>
+    <!-- //.hero-body -->
+</header>
+<!-- //HERO END -->
+<! -- NAVBAR START -->
+<nav class="navbar navbar-default" data-spy="affix" data-offset-top="175">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+        </div>
 
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Resume</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<! -- NAVBAR END -->
+<my-app>Loading...</my-app>
 
-  </body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+            <h1>Hello, my name is Cody!</h1>
+            <h3>I am an aspiring Full Stack Software Engineer graduating in December with a degree in Computer Science and Mathematics.</h3>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        foot
+    </footer>
+</body>
 </html>

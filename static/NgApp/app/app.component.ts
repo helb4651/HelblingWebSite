@@ -2,6 +2,22 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    templateUrl: 'static/NgApp/partials/test.html'
 })
-export class AppComponent { }
+
+export class AppComponent {
+    name: string;
+    artists: string[];
+
+    constructor() {
+        this.name = 'Bib';
+        this.artists = [
+            {
+                name: 'one'
+            },
+            {
+                name: 'two'
+            }
+            ];
+    }
+}
