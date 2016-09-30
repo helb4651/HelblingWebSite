@@ -10,4 +10,4 @@ def hello(request):
     return HttpResponse(loader.get_template("hello.html").render())
 
 def momo(request):
-    return render_to_response('index.html')
+    return render_to_response('base.html')

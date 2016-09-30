@@ -16,11 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+import Home
+from Home import views
 import ContentBlock
 from ContentBlock import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^hello/', ContentBlock.views.hello),
-    url(r'', ContentBlock.views.momo),
+    # url(r'^hello/', ContentBlock.views.hello),
+    # url(r'', ContentBlock.views.momo),
+    url(r'', Home.views.homepage),
 ]

@@ -1,0 +1,86 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Glegoo" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/override_bootstrap.css" %}"/>
+    <script src="{% static "js/portfolio.js" %}"></script>
+</head>
+<body>
+
+
+<div class="jumbotron text-center title_text" style="padding-bottom: 0px;">
+
+    <header class="navbar navbar-inverse bs-docs-nav fade-in p5_sec" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                {#          <a href="./" class="navbar-brand">Bootstrap 3 Menu Generator</a>#}
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#">Resume</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <p class="fade-in p7_sec" style="padding-top: 70px;">
+        {% block header_quote %}
+        {% endblock %}
+    </p>
+
+    <h1 class="fade-in one_sec" style="padding-top: 20px;{% block title_style %}{% endblock %}">
+        {% block title %}
+        {% endblock %}
+    </h1>
+
+</div>
+
+
+{#Section One ----- Summary#}
+<div>
+    <div class="row text-center" style="{% block page_details_style %} {% endblock %}">
+        <h2>
+            {% block page_details %}
+            {% endblock %}
+        </h2>
+    </div>
+</div>
+
+
+{#Section Two ----- Content#}
+    {% block page_content %}
+    {% endblock %}
+
+
+</body>
+</html>
