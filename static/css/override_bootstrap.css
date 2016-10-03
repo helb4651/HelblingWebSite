@@ -2,8 +2,6 @@
 
 
 /* ------------------------ Bootstrap Navbar Styling ------------------------ */
-
-
 /*Transparent Background*/
 .navbar {
     background-color: transparent;
@@ -19,22 +17,21 @@
 }
 
 .navbar .navbar-collapse {
-    text-align: center;
+    text-align: right;
 }
 
 
 
 /* ------------------------ Bootstrap Jumbotron Styling ------------------------ */
-
 /*Background Image*/
 .jumbotron {
     font-family: 'Open Sans', sans-serif;
-    background-image: url("../Images/desk.jpg");
+    /*background-image: url("../Images/deskStuff.jpg");*/
     transition: all 1s ease-in;
     background-size: cover;
     /*Shade Over Background*/
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
-    height: 500px;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+    height: 550px;
 
     /*Moves navbar up in the jumbo*/
     padding-top:20px;
@@ -90,33 +87,129 @@
 /* ------------------------ Project List Styling ------------------------ */
 
 .project_image{
-    width: 90%;
-    padding-bottom:7%;
-    padding-top:7%;
+    width: 100%;
+    padding-bottom:0%;
+    padding-top:0%;
     margin: 0px;
 }
 
-.overlay {  background: rgba(255, 255, 255, 0.98);
-    opacity:1;
-    -webkit-transition: opacity .25s ease;
-}
+/*.overlay {*/
+    /*background: rgb(234, 0, 255);*/
+    /*opacity:1;*/
+    /*-webkit-transition: opacity .25s ease;*/
+/*}*/
 
-.overlay:hover {
-    opacity: .7;
-}
+/*.overlay:hover {*/
+    /*opacity: .7;*/
+
+/*}*/
 
 .proj_pic_text {
     position: absolute;
-    top: 30%;
+    top: 28%;
     left: 0;
     width: 100%;
     color: white;
     opacity: 0;
+    transition-property: top, left;
+    transition: all .3s ease-in-out;
+
 }
 
-.image:hover .proj_pic_text {
-    opacity: 1;
+
+/*This if for putting hover text over portfolio project icons... Use for image backgrounds*/
+/*.image_text_over:hover .proj_pic_text {*/
+    /*top: 30%;*/
+    /*opacity: 1;*/
+    /*font-size: 220%;*/
+    /*-webkit-animation-duration:2s;*/
+    /*-moz-animation-duration:2s;*/
+    /*animation-duration:2s;*/
+/*}*/
+
+/*.image_text_over:hover img{*/
+    /*-webkit-filter: grayscale(1%); !* Chrome, Safari, Opera *!*/
+    /*filter: none;*/
+        /*-webkit-transition: all .8s ease; !* Fade to color for Chrome and Safari *!*/
+   /*!*opacity: 0.5;*!*/
+    /*!*-webkit-transition: opacity 1s ease;*!*/
+/*}*/
+
+
+/*Initally portfolio images are grayscale, then color on hover*/
+.grayscale {
+    /*background:black;*/
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
 }
 
-.image {
+.grayscale:hover{
+    -webkit-filter: grayscale(1%); /* Chrome, Safari, Opera */
+    filter: none;
+        -webkit-transition: all .8s ease; /* Fade to color for Chrome and Safari */
+   /*opacity: 0.5;*/
+    /*-webkit-transition: opacity 1s ease;*/
+}
+
+
+.navbar-header{
+    margin-left:2% !important;
+}
+
+.nav li{
+    text-align: right !important;
+    padding-right:15px;
+    padding-top: 14px;
+   }
+
+.nav a{
+    color: white !important;
+    font-size: 1.0em !important;
+    }
+
+ul.nav a:hover {
+    color:  #86ff52 !important;
+}
+
+
+.skills_list{
+    color: #7a7371;
+}
+
+
+/*Horozontal Rule*/
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(176, 176, 176, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+.download-box{
+    width: 200px;
+    padding: 10px;
+    border: 2px solid white;
+    margin: 0;
+    text-align: center;
+}
+
+.download-box:hover{
+    background-color: white;
+    color: #1c1c1c;
+    transition: all .3s ease-in-out;
+}
+
+.centerBlock {
+  display: table;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+a:hover {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
 }
