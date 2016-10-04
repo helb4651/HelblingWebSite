@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{#Nav bar stuff#}
+
+
+{% block jumbo_bg_path %}
+    {%  static "Images/DSC_0500.jpg" %}
+{% endblock %}
+
+{#Header stuff#}
+{% block header_quote %}
+    Learning from the big dogs at HP!
+{% endblock %}
+
+
+{% block header_quote_style %}
+    font-family: 'Nothing You Could Do', cursive; padding-top: 20%;
+{% endblock %}
+
+
+{% block title %}
+    Senior Project
+{% endblock %}
+
+
+{% block title_style %}
+    font-family: 'Open Sans', sans-serif; font-weight: 700;
+{% endblock %}
+
+
+{% block page_details %}
+{#    Each block represents project or software development milestone.#}
+{% endblock %}
+
+
+{% block page_details_style %}
+{#     background-color: #eee; padding-top: 130px; padding-bottom: 130px; font-family: 'Glegoo', serif;#}
+{% endblock %}
+
+
+{% block page_content %}
+    <div class="container" style="font-family: 'Open Sans', sans-serif;">
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-2">
+                <h3>Overview</h3>
+            </div>
+            <div class="col-sm-8" style="padding-top: 2%;">
+                <p>
+                    	&#160;&#160;&#160;&#160;&#160;&#160;At the University of Idaho, students in the College of Engineering participate in a Capstone senior project. Companies provide projects and resources for the teams to work on. I was lucky enough to get on Hp’s team. Our senior project involved implementing a way for managed print services to be notified of printer problems. Here is a link to a slide show provided by Hp. If you'd like to know more specifics about the project you follow this link to our <a href="http://mindworks.shoutwiki.com/wiki/Fleet_Service_Responder" style="color:#428eff;">project's wiki</a> page.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-2">
+                <h3>Tools Used</h3>
+            </div>
+            <div class="col-sm-8" style="padding-top: 4%;">
+                {% for language in languages %}
+                    {% if language.senior_proj %}
+                        <div class="row">
+                            <div class="col-sm-offset-1 col-sm-1">
+                                &#8226
+                            </div>
+                            <div class="col-sm-4">
+                                {{ language.name }}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                {% for tool in dev_tools %}
+                    {% if tool.senior_proj %}
+                        <div class="row">
+                            <div class="col-sm-offset-1 col-sm-1">
+                                &#8226
+                            </div>
+                            <div class="col-sm-4">
+                                {{ tool.name }}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+        <div class="container" style="font-family: 'Open Sans', sans-serif;">
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-2">
+                <h3>Design </h3>
+            </div>
+            <div class="col-sm-8" style="padding-top: 2%;">
+                <p>
+                    	&#160;&#160;&#160;&#160;&#160;&#160;My favorite part of this project was focusing on the needs of our customer. Instead of jumping quickly to code, we spent significant time ensuring we’d meet the needs of our end users. Our advisor from Hp walked us through a process called design thinking. Design thinking helps to make valuable products by meeting the needs of customers. Our product was much more valuable because of this process and I’ve found design thinking has value in multiple scopes of software design.
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+{% block page_content_style %}
+     background-color: #FFFFFF; padding-top: 200px; padding-bottom: 100px;
+{% endblock %}

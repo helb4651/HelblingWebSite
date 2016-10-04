@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+
+{#Nav bar stuff#}
+
+
+{#Header stuff#}
+{% block header_quote %}
+    header quote....
+{% endblock %}
+
+
+{% block header_quote_style %}
+    font-family: 'Nothing You Could Do', cursive;
+{% endblock %}
+
+
+{% block title %}
+    RESTful API
+{% endblock %}
+
+
+{% block title_style %}
+    font-family: 'Open Sans', sans-serif; font-weight: 700;
+{% endblock %}
+
+
+{% block page_details %}
+{#    Each block represents project or software development milestone.#}
+{% endblock %}
+
+
+{% block page_details_style %}
+{#     background-color: #eee; padding-top: 130px; padding-bottom: 130px; font-family: 'Glegoo', serif;#}
+{% endblock %}
+
+
+{% block page_content %}
+    <div class="container" style="font-family: 'Open Sans', sans-serif;">
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-2">
+                <h3>Overview</h3>
+            </div>
+            <div class="col-sm-8" style="padding-top: 2%;">
+                <p>
+                    	&#160;&#160;&#160;&#160;&#160;&#160;This past summer at Decagon Devices I worked on a team responsible for the logging, storage and retrieval of data from environmental sensors. One of Decagons early adopters for the new version of this product is TAHMO. I was privileged to work with the product owner, and representatives from TAHMO to design and develop an API for our for sensor data retrieval. I was also privileged to perform the implementation thus far in the API.
+                </p>
+                <p>
+                    I used the following technologies to bring the interface to life:
+                </p>
+                {% for language in languages %}
+                    {% if language.decagon %}
+                        <div class="row">
+                            <div class="col-sm-offset-1 col-sm-1">
+                                &#8226
+                            </div>
+                            <div class="col-sm-4">
+                                {{ language.name }}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                {% for tool in dev_tools %}
+                    {% if tool.decagon %}
+                        <div class="row">
+                            <div class="col-sm-offset-1 col-sm-1">
+                                &#8226
+                            </div>
+                            <div class="col-sm-4">
+                                {{ tool.name }}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+        <div class="container" style="font-family: 'Open Sans', sans-serif;">
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-2">
+                <h3>Web Docs</h3>
+            </div>
+            <div class="col-sm-8" style="padding-top: 2%;">
+                <p>
+                    	&#160;&#160;&#160;&#160;&#160;&#160;My favorite part of this project was building web documentation for the API. Tools like Swagger.io didn’t provide the resolution and clairity we were looking for, so one night I started up a pet project to make my own web documention. After some positive feedback from coworkers, it was presented to TAHMO, where it again received positive feedback!
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+{% block page_content_style %}
+     background-color: #FFFFFF; padding-top: 200px; padding-bottom: 100px;
+{% endblock %}

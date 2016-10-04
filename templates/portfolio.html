@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{#Nav bar stuff#}
+
+
+{#Header stuff#}
+{% block page_title %}
+    Portfolio
+{% endblock %}
+
+{% block jumbo_bg_path %}
+{% static "Images/desk.jpg" %}
+{% endblock %}
+
+
+{% block header_quote %}
+    My software development projects
+{% endblock %}
+
+
+{% block header_quote_style %}
+    font-family: 'Nothing You Could Do', cursive;
+{% endblock %}
+
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+
+{% block title_style %}
+    font-family: 'Open Sans', sans-serif; font-weight: 700;
+{% endblock %}
+
+
+{% block page_details %}
+    Recent projects I've worked on!
+{% endblock %}
+
+
+{% block page_details_style %}
+     background-color: #eee; padding-top: 130px; padding-bottom: 130px; font-family: 'Glegoo', serif;
+{% endblock %}
+
+
+{% block page_content %}
+    <div class="container" style="padding-top: 10%; padding-bottom: 10%;">
+        <div class="row">
+            {% for project in projects %}
+
+                <div class="col-sm-4" align="center">
+                    <div style="padding-top: 7%;">
+                        <a href="/portfolio/{{ project.path_name }}">
+                            <div class="grayscale">  {#image_text_over class can be added later for text hover over bg image#}
+                                <img class="project_image overlay" src="../static/Images/{{ project.image_name }}">
+                                <h2 class="proj_pic_text fade" style="font-family: 'Open Sans', sans-serif; font-weight:300;">{{ project.name }}</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block page_content_style %}
+     background-color: #FFFFFF; padding-top: 200px; padding-bottom: 100px;
+{% endblock %}
