@@ -9,6 +9,9 @@
     border-width: 0px;
 }
 
+.navbar-inner:hover{
+    background: transparent;
+}
 /*Center Contents*/
 .navbar .navbar-nav {
     display: inline-block;
@@ -60,27 +63,27 @@
     -moz-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:1s;
+    -webkit-animation-duration:.5s;
+    -moz-animation-duration:.5s;
+    animation-duration:.5s;
 }
 
 .fade-in.p5_sec {
-    -webkit-animation-delay: 0.5s;
-    -moz-animation-delay: 0.5s;
-    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.3s;
+    -moz-animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 
 .fade-in.p7_sec {
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+    animation-delay: .5s;
 }
 
 .fade-in.one_sec {
-    -webkit-animation-delay: 2s;
-    -moz-animation-delay: 2s;
-    animation-delay: 2s;
+    -webkit-animation-delay: .7s;
+    -moz-animation-delay: .7s;
+    animation-delay: .7s;
 }
 
 
@@ -212,4 +215,44 @@ a {
 a:hover {
   color: inherit; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
+}
+
+.footer_lk:hover {
+    color: rgb(181, 255, 88);
+    transition: all .3s ease-in-out;
+}
+.fa-facebook{
+    color: white;
+}
+
+.fa-facebook:hover {
+    color: #3b5998; !important;
+    transition: all .3s ease-in-out;
+}
+
+.fa-github{
+    color: white;
+}
+
+.fa-github:hover{
+    color: orange; !important;
+    transition: all .3s ease-in-out;
+}
+
+.fa-google{
+    color: white;
+}
+
+.fa-google:hover{
+    color: #dd4b39; !important;
+    transition: all .3s ease-in-out;
+}
+
+.fa-linkedin{
+    color: white;
+}
+
+.fa-linkedin:hover{
+    color: #007bb5; !important;
+    transition: all .3s ease-in-out;
 }
