@@ -13,13 +13,16 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Glegoo" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/png" href="{% static "Images/favicon.png" %}"/>
     <link rel="stylesheet" href="{% static "css/override_bootstrap.css" %}"/>
     <script src="{% static "js/portfolio.js" %}"></script>
 </head>
 <body>
 
 
-<div class="jumbotron text-center title_text" style="padding-bottom: 0px; background-image: url({% block jumbo_bg_path %}{% endblock %});">
+<div class="jumbotron text-center title_text" style="padding-bottom: 0px; background-image: url({% block jumbo_bg_path %}{% endblock %}); -webkit-transition: background-image 0.2s ease-in-out;
+transition: background-image 0.2s ease-in-out;">
 
     <header class="navbar navbar-inverse bs-docs-nav fade-in p5_sec" role="banner">
         <div class="container">
@@ -49,12 +52,14 @@
                         <a href="/resume">Resume</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a data-toggle="modal" class="clickable" data-target="#contactModal">Contact</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
+
+
 
     <p class="fade-in p7_sec" style="padding-top: 100px;{% block header_quote_style %}{% endblock %}">
         {% block header_quote %}
@@ -86,6 +91,92 @@
     {% block page_content %}
     {% endblock %}
 
+
+<div class="container-fluid" style="padding-top: 75px;">
+    <div class="row" style="padding-top:30px; padding-bottom:30px; background-color: #333333;">
+        <div class="col-sm-offset-4 col-sm-4 text-center">
+            <img src="{% static "Images/Logo6.png" %}" style="padding-left:3%; height: 50px;">
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" >
+    <div class="row" style="padding-top: 20px; padding-bottom: 20px; background-color: #1d1d1d;">
+{#Text Here?#}
+    </div>
+
+
+    <div class="row" style="background-color: #1d1d1d;">
+        <div class="col-sm-offset-3 col-sm-6 text-center" style="font-family: 'Open Sans', sans-serif; font-weight:300; background: transparent;">
+                <div class="row">
+                    <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: transparent; color: white; align-items: center; align-content: center;">
+                        <div class="col-sm-3">
+                                <a class="footer_lk" style="white-space:nowrap;" href="/">Who Am I?</a>
+                        </div>
+                        <div class="col-sm-3">
+                                <a class="footer_lk"  href="/portfolio">Portfolio</a>
+                        </div>
+                        <div class="col-sm-3 ">
+                                <a class="footer_lk"  href="/resume">Resume</a>
+                        </div>
+                        <div class="col-sm-3">
+                                <span class="footer_lk clickable" data-toggle="modal" data-target="#contactModal" href="/contact">Contact</span>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="background-color: #1d1d1d; padding-top: 2%;">
+        <div class="col-sm-offset-5 col-sm-2" style="font-family: 'Open Sans', sans-serif; font-weight:300; background: transparent;">
+            <div class="row">
+                <div class=" col-sm-3 text-center">
+                    <a href="https://github.com/chelbling"><i class="fa fa-github" style="font-size:24px;"></i></a>
+                </div>
+                <div class="col-sm-3 text-center">
+                    <a href="https://plus.google.com/u/0/101236758693281315070"><i class="fa fa-google" style="font-size:24px;"></i></a>
+                </div>
+                <div class="col-sm-3 text-center">
+                    <a href="https://www.linkedin.com/in/cody-helbling-3b941769"><i class="fa fa-linkedin" style="font-size:24px;"></i></a>
+                </div>
+                <div class="col-sm-3 text-center">
+                    <a href="https://www.facebook.com/cody.helbling.5"><i class="fa fa-facebook" style="font-size:24px;"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="padding-top:20px; padding-bottom: 20px; background-color: #1d1d1d;">
+        <div class="col-sm-offset-4 col-sm-4">
+
+        </div>
+    </div>
+</div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="contactModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center">Contact Information</h4>
+        </div>
+        <div class="modal-body text-center">
+          <p>Email me any time!</p>
+            <p>helblingcody@gmail.com</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 </body>
 </html>
